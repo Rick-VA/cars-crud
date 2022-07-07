@@ -1,11 +1,6 @@
 @extends('layout')
 
 @section('content')
-    <style>
-        .uper {
-            margin-top: 40px;
-        }
-    </style>
     <div class="uper">
         @if(session()->get('success'))
             <div class="alert alert-success">
@@ -15,7 +10,6 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <td>ID</td>
                 <td>Car brand</td>
                 <td>Car model</td>
                 <td colspan="2">Action</td>
@@ -24,7 +18,6 @@
             <tbody>
             @foreach($cars as $car)
                 <tr>
-                    <td>{{$car->id}}</td>
                     <td>{{$car->name}}</td>
                     <td>{{$car->model}}</td>
                     <td><a href="{{ route('cars.edit', $car->id)}}" class="btn btn-primary">Edit</a></td>

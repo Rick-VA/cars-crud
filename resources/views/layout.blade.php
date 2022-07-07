@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stage</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     @yield('content')
 </div>
-<script src="{{ asset('js/app.js') }}" type="text/js"></script>
 </body>
 </html>
