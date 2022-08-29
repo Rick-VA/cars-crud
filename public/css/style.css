@@ -15,6 +15,24 @@ a{
     text-decoration: none;
 }
 
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.cars{
+    text-align: center;
+}
+
+.tablerow{
+ text-indent: 20px;
+}
+
+.table{
+    margin-top: 20px;
+}
+
+
   .button-30 {
    align-items: center;
    appearance: none;

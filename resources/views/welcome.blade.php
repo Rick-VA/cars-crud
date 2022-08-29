@@ -16,8 +16,11 @@
 <div class="welcometekst">
     Opdracht Stage
 </div>
+
+<div class="button">
 <a href="/cars">
 <button class="button-30" role="button">Start</button>
 </a>
+</div>
 </body>
 </html>

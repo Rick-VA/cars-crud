@@ -1,13 +1,13 @@
 @extends('layout')
 
 @section('content')
-    <div class="card uper">
-        <div class="card-header">
+    <div>
+        <div>
             Edit Car Data
         </div>
-        <div class="card-body">
+        <div>
             @if ($errors->any())
-                <div class="alert alert-danger">
+                <div>
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -16,17 +16,17 @@
                 </div><br />
             @endif
             <form method="post" action="{{ route('cars.update', $car->id ) }}">
-                <div class="form-group">
+                <div>
                     @csrf
                     @method('PATCH')
-                    <label for="country_name">Car brand:</label>
-                    <input type="text" class="form-control" name="name" value="{{ $car->name }}"/>
+                    <label>Car brand:</label>
+                    <input type="text" name="name" value="{{ $car->name }}"/>
                 </div>
-                <div class="form-group">
-                    <label for="cases">Car model:</label>
-                    <input type="text" class="form-control" name="model" value="{{ $car->model }}"/>
+                <div>
+                    <label>Car model:</label>
+                    <input type="text" name="model" value="{{ $car->model }}"/>
                 </div>
-                <button type="submit" class="btn btn-primary">Update Data</button>
+                <button type="submit" class="button-30">Update Data</button>
             </form>
         </div>
     </div>

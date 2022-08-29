@@ -3,13 +3,20 @@
 @section('content')
     <div class="uper">
         @if(session()->get('success'))
-            <div class="alert alert-success">
+            <div>
                 {{ session()->get('success') }}
             </div><br />
         @endif
-        <table class="table table-striped">
+        <div class="table">Cars list</div>
+        <div class="textadd">
+            <a href="/cars/create">
+                <button class="button-30" role="button">add a car</button>
+            </a>
+        </div>
+
+        <table class="table">
             <thead>
-            <tr>
+            <tr class="tablerow">
                 <td>Car brand</td>
                 <td>Car model</td>
                 <td colspan="2">Action</td>
@@ -17,15 +24,15 @@
             </thead>
             <tbody>
             @foreach($cars as $car)
-                <tr>
-                    <td>{{$car->name}}</td>
-                    <td>{{$car->model}}</td>
-                    <td><a href="{{ route('cars.edit', $car->id)}}" class="btn btn-primary">Edit</a></td>
+                <tr >
+                    <td class="cars">{{$car->name}}</td>
+                    <td class="cars">{{$car->model}}</td>
+                    <td><a href="{{ route('cars.edit', $car->id)}}" class="button-30">Edit</a></td>
                     <td>
                         <form action="{{ route('cars.destroy', $car->id)}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger" type="submit">Delete</button>
+                            <button class="button-30" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>
